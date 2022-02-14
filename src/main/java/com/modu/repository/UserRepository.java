@@ -1,6 +1,6 @@
-package com.repository;
+package com.modu.repository;
 
-import com.user.UserInfo;
+import com.modu.user.UserInfo;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
