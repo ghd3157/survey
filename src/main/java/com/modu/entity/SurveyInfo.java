@@ -1,22 +1,14 @@
-package com.modu.user;
+package com.modu.entity;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
-import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 
-@DynamicUpdate
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+@Entity
 @Getter
 @Setter
-@Entity
-@ToString
 @Table(name = "survey")
-public class UserInfo {
+public class SurveyInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,28 +1,25 @@
 package com.modu.controller;
 
-import com.modu.service.UserService;
-import com.modu.user.UserInfo;
+import com.modu.service.SurveyService;
+import com.modu.entity.SurveyInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
 @RequestMapping("/user")
 @ComponentScan(basePackages={"com.modu"})
-public class UserController {
+public class SurveyController {
 
     @Autowired
-    private UserService userService;
+    private SurveyService surveyService;
 
-    @RequestMapping(value = "/dataSend", method = RequestMethod.POST)
-    public String dataSend(UserInfo userInfo){
+    @RequestMapping(value = "/dataSend")
+    public String dataSend(SurveyInfo surveyInfo){
 
-        System.out.println(userInfo.toString());
-
-        userService.insertUser(userInfo);
+        surveyService.insertSurvey(surveyInfo);
 
         return "/hello";
     }
