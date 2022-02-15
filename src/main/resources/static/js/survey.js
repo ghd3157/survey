@@ -24,18 +24,29 @@ function showTab(n) {
 function nextPrev(n) {
     var x = document.getElementsByClassName("tab");
 
+    var objective = [];
+    var education = [];
+    var advice = [];
     var name = $("#name").val();
     var phone = $("#phone").val();
-    var objective = $("#objective").val();
-    var education = $("#education").val();
-    var advice = $("#advice").val();
     var memo = $("#memo").val();
+
+    $("input[name=obj]:checked").each(function () {
+        objective.push($(this).val());
+    });
+
+    $("input[name=edu]:checked").each(function () {
+        education.push($(this).val());
+    });
+
+    $("input[name=adv]:checked").each(function () {
+        advice.push($(this).val());
+    });
 
     var allData = {"name": name, "phone":phone , "objective":objective ,
                     "education":education, "advice":advice, "memo":memo };
 
     console.log(name + " / " + phone+ " / " + objective+ " / " + education+ " / " + advice+ " / " + memo)
-
 
 
     if (n == 1 && !validateForm())
@@ -48,7 +59,6 @@ function nextPrev(n) {
         document.getElementById("all-steps").style.display = "none";
         document.getElementById("register").style.display = "none";
         document.getElementById("text-message").style.display = "block";
-
 
 
         $.ajax({

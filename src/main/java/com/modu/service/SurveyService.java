@@ -31,7 +31,7 @@ public class SurveyService {
         survey.setName(surveyInfo.getName());
         survey.setPhone(surveyInfo.getPhone());
         survey.setObjective(surveyInfo.getObjective());
-        survey.setEducation(surveyInfo.getObjective());
+        survey.setEducation(surveyInfo.getEducation());
         survey.setAdvice(surveyInfo.getAdvice());
         survey.setMemo(surveyInfo.getMemo());
 
