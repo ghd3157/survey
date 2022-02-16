@@ -25,9 +25,9 @@
 <body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="/js/survey.js"></script>
-    <div class="container mt-5">
+    <div class="flex-container">
         <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-md-8">
+            <div>
                 <form id="regForm">
                     <h1 id="register">Survey Form</h1>
                     <div class="all-steps" id="all-steps"> <span class="step"><i class="fa fa-user"></i></span> <span class="step"><i class="fa fa-map-marker"></i></span> <span class="step"><i class="fa fa-shopping-bag"></i></span> <span class="step"><i class="fa fa-car"></i></span> <span class="step"><i class="fa fa-spotify"></i></span> <span class="step"><i class="fa fa-mobile-phone"></i></span> </div>

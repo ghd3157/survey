@@ -1,8 +1,12 @@
 body {
-    background: #eee
+    height: 100vh;
+    background-image: url("/image/bgImage.jpeg");
+    background-repeat : no-repeat;
+    background-size : cover;
 }
 
 #regForm {
+    width: 1000px;
     background-color: #ffffff;
     margin: 0px auto;
     font-family: Raleway;
@@ -68,6 +72,24 @@ button:focus {
 
 #prevBtn {
     background-color: #bbbbbb
+}
+
+.flex-container{
+    height: 100vh;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; /* 수직 정렬 */
+
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; /* 수평 정렬 */
 }
 
 .all-steps {
