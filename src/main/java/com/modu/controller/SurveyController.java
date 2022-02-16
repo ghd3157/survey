@@ -34,4 +34,15 @@ public class SurveyController {
 
         return new ModelAndView("survey");
     }
+
+    /**
+     * 설문지 페이지
+     * @method get
+     * @return
+     */
+    @GetMapping(path = "/surveyPage/new")
+    public ModelAndView surveyNewPage(SurveyInfo surveyInfo) {
+
+        return new ModelAndView("survey_new");
+    }
 }
