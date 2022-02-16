@@ -11,7 +11,7 @@ body {
 }
 
 #register {
-    color: #6A1B9A
+    color: #0e76bc
 }
 
 h1 {
@@ -29,7 +29,7 @@ input.input {
 }
 
 .tab input.input:focus {
-    border: 1px solid #6a1b9a !important;
+    border: 1px solid #0e76bc !important;
     outline: none
 }
 
@@ -48,7 +48,7 @@ input.input.invalid {
 }
 
 button {
-    background-color: #6A1B9A;
+    background-color: #0e76bc;
     color: #ffffff;
     border: none;
     border-radius: 50%;
@@ -90,7 +90,7 @@ button:focus {
     justify-content: center;
     align-items: center;
     font-size: 15px;
-    color: #6a1b9a;
+    color: #0e76bc;
     opacity: 0.5
 }
 
@@ -100,7 +100,7 @@ button:focus {
 
 .step.finish {
     color: #fff;
-    background: #6a1b9a;
+    background: #0e76bc;
     opacity: 1
 }
 
