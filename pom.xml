@@ -9,10 +9,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>work</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>modu</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
-    <description>Demo project for Spring Boot</description>
+    <packaging>war</packaging>
+    <name>modu</name>
+    <description>Modu Edu survey form</description>
     <properties>
         <java.version>11</java.version>
     </properties>

@@ -4,11 +4,8 @@ import com.modu.service.SurveyService;
 import com.modu.entity.SurveyInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 
 @RestController
@@ -25,5 +22,16 @@ public class SurveyController {
         surveyService.insertSurvey(surveyInfo);
 
         return "/hello";
+    }
+
+    /**
+     * 설문지 페이지
+     * @method get
+     * @return
+     */
+    @GetMapping(path = "/surveyPage")
+    public ModelAndView surveyPage(SurveyInfo surveyInfo) {
+
+        return new ModelAndView("survey");
     }
 }
