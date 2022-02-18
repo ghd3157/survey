@@ -8,6 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign Up Form</title>
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <!-- Font Icon -->
     <link rel="stylesheet" href="/template/fonts/material-icon/css/material-design-iconic-font.min.css">
 
@@ -25,56 +28,52 @@
                 학습목표
             </h3>
             <fieldset>
-                <div class="form-row form-input-flex">
-                    <input class="form-input" type="checkbox" name="obj" id="inlineCheckbox1" value="1">
-                    <label class="form-check-label form-check-text" for="inlineCheckbox1">자격증 취득 과정</label>
-                    <input class="form-input" type="checkbox" name="obj" id="inlineCheckbox2" value="2">
-                    <label class="form-check-label form-check-text" for="inlineCheckbox2">자격증 취득 과정</label>
-                    <input class="form-input" type="checkbox" name="obj" id="inlineCheckbox3" value="3">
-                    <label class="form-check-label form-check-text" for="inlineCheckbox3">기사/산업기사 응시자격</label>
-                    <input class="form-input" type="checkbox" name="obj" id="inlineCheckbox4" value="4">
-                    <label class="form-check-label form-check-text" for="inlineCheckbox4">학위취득 취득과정</label>
-                    <input class="form-input" type="checkbox" name="obj" id="inlineCheckbox5" value="5">
-                    <label class="form-check-label form-check-text" for="inlineCheckbox5">대학원 진학준비</label>
+                <div class="tab">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox1" value="1">
+                        <label class="form-check-label" for="inlineCheckbox1">편입 및 대졸자 전형준비</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox2" value="2">
+                        <label class="form-check-label" for="inlineCheckbox2">자격증 취득 과정</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox3" value="3">
+                        <label class="form-check-label" for="inlineCheckbox3">기사/산업기사 응시자격</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox4" value="4">
+                        <label class="form-check-label" for="inlineCheckbox4">학위취득 취득과정</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox5" value="4">
+                        <label class="form-check-label" for="inlineCheckbox4">학위취득 취득과정</label>
+                    </div>
                 </div>
             </fieldset>
             <h3>
                 최종학력
             </h3>
             <fieldset>
-                <div class="form-radio">
-                    <label for="job" class="label-radio">What are you doing ?</label>
-                    <div class="form-flex">
-                        <div class="form-radio">
-                            <input type="radio" name="job" value="designer" id="designer" />
-                            <label for="designer">
-                                <figure>
-                                    <img src="images/icon-1.png" alt="">
-                                </figure>
-                                <span>Designer</span>
-                            </label>
-                        </div>
-
-                        <div class="form-radio">
-                            <input type="radio" name="job" value="coder" id="coder" checked="checked" />
-                            <label for="coder">
-                                <figure>
-                                    <img src="images/icon-2.png" alt="">
-                                </figure>
-                                <span>Coder</span>
-                            </label>
-                        </div>
-
-                        <div class="form-radio">
-                            <input type="radio" name="job" value="developer" id="developer" />
-                            <label for="developer">
-                                <figure>
-                                    <img src="images/icon-3.png" alt="">
-                                </figure>
-                                <span>Developer</span>
-                            </label>
-                        </div>
-                    </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox6" value="1">
+                    <label class="form-check-label" for="inlineCheckbox6">고등학교 졸업</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox7" value="2">
+                    <label class="form-check-label" for="inlineCheckbox7">전문대학교 졸업</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox8" value="3">
+                    <label class="form-check-label" for="inlineCheckbox8">4년제 대학교 졸업</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox9" value="4">
+                    <label class="form-check-label" for="inlineCheckbox9">대학교 중퇴</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox10" value="5">
+                    <label class="form-check-label" for="inlineCheckbox10">기타</label>
                 </div>
             </fieldset>
 
@@ -82,25 +81,15 @@
                 상담진행방식
             </h3>
             <fieldset>
-                <div class="form-row form-input-flex">
-                    <div class="form-input">
-                        <input type="text" name="street_name" id="street_name" placeholder="Street Name" />
+                <div class="tab">
+                    <h3>상담진행방식</h3>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="adv" id="inlineCheckbox11" value="1">
+                        <label class="form-check-label" for="inlineCheckbox11">전화상담</label>
                     </div>
-                    <div class="form-input">
-                        <input type="text" name="street_number" id="street_number" placeholder="Street Number" />
-                    </div>
-                </div>
-                <div class="form-row form-input-flex">
-                    <div class="form-input">
-                        <input type="text" name="city" id="city" placeholder="City" />
-                    </div>
-                    <div class="form-input">
-                        <select name="country" id="country">
-                            <option value="">Country</option>
-                            <option value="Viet Nam">Viet Nam</option>
-                            <option value="USA">USA</option>
-                        </select>
-                        <span class="select-icon"><i class="zmdi zmdi-caret-down"></i></span>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="adv" id="inlineCheckbox12" value="2">
+                        <label class="form-check-label" for="inlineCheckbox12">카카오톡 상담</label>
                     </div>
                 </div>
             </fieldset>
@@ -108,15 +97,9 @@
                 담당자에게 하고싶은 말
             </h3>
             <fieldset>
-                <div class="form-row">
-                    <div class="form-group-flex">
-                        <div class="form-group">
-                            <input type="text" name="first_name" id="first_name" placeholder="First Name" />
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="last_name" id="last_name" placeholder="Last Name" />
-                        </div>
-                    </div>
+                <div class="tab">
+                    <h3>담당자에게 전하고 싶은 말</h3>
+                    <p><input class="input" placeholder="" id="memo"></p>
                 </div>
             </fieldset>
             <h3>
@@ -126,10 +109,10 @@
                 <div class="form-row">
                     <div class="form-group-flex">
                         <div class="form-group">
-                            <input type="text" name="first_name" id="first_name" placeholder="First Name" />
+                            <input type="text" name="first_name" id="name" placeholder="이름" />
                         </div>
                         <div class="form-group">
-                            <input type="text" name="last_name" id="last_name" placeholder="Last Name" />
+                            <input type="text" name="last_name" id="phone" placeholder="연락처" />
                         </div>
                     </div>
                 </div>

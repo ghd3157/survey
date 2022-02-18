@@ -16,7 +16,7 @@ public class SurveyController {
     @Autowired
     private SurveyService surveyService;
 
-    @RequestMapping(value = "/dataSend")
+    @RequestMapping(value = "/surveyPage/dataSend")
     public String dataSend(SurveyInfo surveyInfo){
 
         surveyService.insertSurvey(surveyInfo);

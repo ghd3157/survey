@@ -12,22 +12,21 @@
             last_name : {
                 required: true,
             },
-            email : {
+            obj : {
                 required: true,
-                email: true
             }
         },
         messages: {
             first_name : {
-                required : "Please enter your first name"
+                required : "이름을 입력해주세요"
             },
             last_name : {
-                required : "Please enter your last name"
+                required : "연락처를 입력해주세요"
             },
-            email : {
-                required : "Please enter your first name",
-                email: "Please enter a valid email address!"
-            }
+            obj : {
+                required : "한개 이상 선택해주세요"
+
+            },
         },
         onfocusout: function(element) {
             $(element).valid();
@@ -72,7 +71,42 @@
         },
         onFinished: function (event, currentIndex)
         {
-            alert('Sumited');
+            var objective = [];
+            var education = [];
+            var advice = [];
+            var name = $("#name").val();
+            var phone = $("#phone").val();
+            var memo = $("#memo").val();
+
+            $("input[name=obj]:checked").each(function () {
+                objective.push($(this).val());
+            });
+
+            $("input[name=edu]:checked").each(function () {
+                education.push($(this).val());
+            });
+
+            $("input[name=adv]:checked").each(function () {
+                advice.push($(this).val());
+            });
+
+            var allData = {"name": name, "phone":phone , "objective":objective ,
+                "education":education, "advice":advice, "memo":memo };
+
+            console.log(name + " / " + phone+ " / " + objective+ " / " + education+ " / " + advice+ " / " + memo)
+
+            $.ajax({
+                url: "dataSend",
+                type: "POST",
+                data: allData,
+                success:function () {
+                    alert("성공");
+                },
+                error:function () {
+                    alert("에러발생");
+                    self.close();
+                }
+            });
         },
         onStepChanged: function (event, currentIndex, priorIndex)
         {
