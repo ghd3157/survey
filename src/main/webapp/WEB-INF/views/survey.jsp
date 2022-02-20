@@ -29,17 +29,12 @@
             <div class="content">
                 <form id="regForm">
                     <h1 id="register">Survey Form</h1>
-                    <div class="all-steps" id="all-steps"> <span class="step"><i class="fa fa-user"></i></span> <span class="step"><i class="fa fa-map-marker"></i></span> <span class="step"><i class="fa fa-shopping-bag"></i></span> <span class="step"><i class="fa fa-car"></i></span> <span class="step"><i class="fa fa-spotify"></i></span> <span class="step"><i class="fa fa-mobile-phone"></i></span> </div>
-                    <div class="tab">
-                        <h3>이름</h3>
-                        <p> <input class="input" placeholder="이름" id="name"></p>
-                    </div>
-                    <div class="tab">
-                        <h3>연락처</h3>
-                        <p><input class="input" placeholder="-를 제외한 휴대폰 번호" id="phone"></p>
-                    </div>
+                    <div class="all-steps" id="all-steps"> <span class="step"><i class="fa fa-user"></i></span> <span class="step"><i class="fa fa-map-marker"></i></span> <span class="step"><i class="fa fa-shopping-bag"></i></span> <span class="step"><i class="fa fa-car"></i></span> <span class="step"><i class="fa fa-spotify"></i></span>  </div>
                     <div class="tab">
                         <h3>학습목표</h3>
+                        <div id="objval" style="padding-bottom: 7px; color: #f63726; display: none;">
+                            <h7>학습목표를 선택해 주세요(복수선택 가능)</h7>
+                        </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox1" value="1">
                             <label class="form-check-label" for="inlineCheckbox1">편입 및 대졸자 전형준비</label>
@@ -63,6 +58,9 @@
                     </div>
                     <div class="tab">
                         <h3>최종학력</h3>
+                        <div id="eduval" style="padding-bottom: 7px; color: #f63726; display: none;">
+                            <h7>최종학력을 선택해 주세요(택1)</h7>
+                        </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox6" value="1">
                             <label class="form-check-label" for="inlineCheckbox6">고등학교 졸업</label>
@@ -86,6 +84,9 @@
                     </div>
                     <div class="tab">
                         <h3>상담진행방식</h3>
+                        <div id="adval" style="padding-bottom: 7px; color: #f63726; display: none;">
+                            <h7>상담 방식을 선택해 주세요</h7>
+                        </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" name="adv" id="inlineCheckbox11" value="1">
                             <label class="form-check-label" for="inlineCheckbox11">전화상담</label>
@@ -96,8 +97,19 @@
                         </div>
                     </div>
                     <div class="tab">
-                        <h3>담당자에게 전하고 싶은 말</h3>
-                        <p><input class="input" placeholder="" id="memo"></p>
+                        <h3>담당자에게 하고싶은말</h3>
+                        <p><input class="input" placeholder="" id="memo" ></p>
+                    </div>
+                    <div class="tab">
+                        <h3>성함 및 연락처</h3>
+                        <div id="nameval" style="padding-bottom: 7px; color: #f63726; display: none;">
+                            <h7>이름을 입력해주세요</h7>
+                        </div>
+                        <p><input class="input" placeholder="이름" id="name" type="text"></p>
+                        <div id="phoneval" style="padding-bottom: 7px; color: #f63726; display: none;">
+                            <h7>연락처를 입력해주세요</h7>
+                        </div>
+                        <p><input class="input" placeholder="-를 제외한 휴대폰 번호" id="phone" type="text"></p>
                     </div>
                     <div class="thanks-message text-center" id="text-message"> <img src="https://i.imgur.com/O18mJ1K.png" width="100" class="mb-4">
                         <h3>Thankyou for your feedback!</h3> <span>Thanks for your valuable information. It helps us to improve our services!</span>

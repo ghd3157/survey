@@ -62,7 +62,7 @@ function nextPrev(n) {
 
 
         $.ajax({
-            url: "user/dataSend",
+            url: "/user/surveyPage/dataSend",
             type: "POST",
             data: allData,
             success:function () {
@@ -79,15 +79,75 @@ function nextPrev(n) {
 }
 
 function validateForm() {
-    var x, y, i, valid = true;
+    var x, y, i, z, h, valid = true;
     x = document.getElementsByClassName("tab");
     y = x[currentTab].getElementsByTagName("input");
+    z = x[currentTab].getElementsByClassName("form-check-input");
+
+    for (h = 0; h < z.length; h++){
+        if(z[h].name == "obj"){
+            if(!$("input:checked[name=obj]").is(":checked")){
+                document.getElementById("objval").style.display = "block";
+                valid=false;
+            } else{
+                document.getElementById("objval").style.display = "none";
+                valid=true;
+            }
+        }
+
+        if(z[h].name == "adv"){
+            if(!$("input:checked[name=adv]").is(":checked")){
+                document.getElementById("adval").style.display = "block";
+                valid=false;
+            } else{
+                document.getElementById("adval").style.display = "none";
+                valid=true;
+            }
+        }
+
+        if(z[h].name == "edu"){
+            var len = $("input[name=edu]:checkbox:checked").length;
+            console.log(len);
+            if( len == 1){
+                document.getElementById("eduval").style.display = "none";
+                valid=true;
+            } else{
+                document.getElementById("eduval").style.display = "block";
+                valid=false;
+            }
+        }
+    }
+
 
     for (i = 0; i < y.length; i++) {
-        if (y[i].value=="" ) {
-            y[i].className +=" invalid" ;
-            valid=false;
+        if(y[i].id == "memo") {
+            valid = true;
+            continue;
         }
+
+        if(y[i].id=="name"){
+            var name = $("#name").val();
+            if(name.trim() ==''){
+                document.getElementById("nameval").style.display = "block";
+                valid=false;
+            }else if(!(name.trim() =='')){
+                document.getElementById("nameval").style.display = "none";
+                valid=true;
+            }
+        }
+
+        if(y[i].id=="phone"){
+            var phone = $("#phone").val();
+            if(phone.trim() ==''){
+                document.getElementById("phoneval").style.display = "block";
+                valid=false;
+            }else if(!(phone.trim() =='')){
+                document.getElementById("phoneval").style.display = "none";
+                valid=true;
+            }
+        }
+
+
     }
 
         if (valid) {

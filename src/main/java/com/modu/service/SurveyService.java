@@ -31,6 +31,7 @@ public class SurveyService {
         SurveyInfo survey = new SurveyInfo();
         SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
+        survey.setName(surveyInfo.getName());
         survey.setPhone(surveyInfo.getPhone());
         survey.setObjective(surveyInfo.getObjective());
         survey.setEducation(surveyInfo.getEducation());
