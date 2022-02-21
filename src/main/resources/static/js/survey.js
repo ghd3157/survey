@@ -18,7 +18,7 @@ function showTab(n) {
     } else {
         document.getElementById("nextBtn").innerHTML = '<i class="fa fa-angle-double-right"></i>';
     }
-    fixStepIndicator(n)
+    // fixStepIndicator(n)
 }
 
 function nextPrev(n) {
@@ -56,7 +56,7 @@ function nextPrev(n) {
     if (currentTab >= x.length) {
 
         document.getElementById("nextprevious").style.display = "none";
-        document.getElementById("all-steps").style.display = "none";
+        // document.getElementById("all-steps").style.display = "none";
         document.getElementById("register").style.display = "none";
         document.getElementById("text-message").style.display = "block";
 
@@ -151,16 +151,16 @@ function validateForm() {
     }
 
         if (valid) {
-            document.getElementsByClassName("step")[currentTab].className +=" finish" ;
+            // document.getElementsByClassName("step")[currentTab].className +=" finish" ;
     }
             return valid;
 }
 
-    function fixStepIndicator(n) {
-    var i, x=document.getElementsByClassName("step");
-
-    for (i=0; i < x.length; i++) {
-        x[i].className=x[i].className.replace(" active", "" );
-    }
-        x[n].className +=" active" ;
-}
+//     function fixStepIndicator(n) {
+//     var i, x=document.getElementsByClassName("step");
+//
+//     for (i=0; i < x.length; i++) {
+//         x[i].className=x[i].className.replace(" active", "" );
+//     }
+//         x[n].className +=" active" ;
+// }
