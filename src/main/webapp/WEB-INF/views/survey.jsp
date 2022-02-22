@@ -100,10 +100,6 @@
                         </div>
                     </div>
                     <div class="tab">
-                        <h3>담당자에게 하고싶은말</h3>
-                        <p><input class="input" placeholder="" id="memo" ></p>
-                    </div>
-                    <div class="tab">
                         <h3>성함 및 연락처</h3>
                         <div id="nameval" style="padding-bottom: 7px; color: #f63726; display: none;">
                             <h7>이름을 입력해주세요</h7>

@@ -120,11 +120,6 @@ function validateForm() {
 
 
     for (i = 0; i < y.length; i++) {
-        if(y[i].id == "memo") {
-            valid = true;
-            continue;
-        }
-
         if(y[i].id=="name"){
             var name = $("#name").val();
             if(name.trim() ==''){
@@ -141,7 +136,10 @@ function validateForm() {
             if(phone.trim() ==''){
                 document.getElementById("phoneval").style.display = "block";
                 valid=false;
-            }else if(!(phone.trim() =='')){
+            }else if(!(phone.trim() == '')){
+                document.getElementById("phoneval").style.display = "none";
+            }
+            else if(!(phone.trim() =='') && !(name.trim() == '')){
                 document.getElementById("phoneval").style.display = "none";
                 valid=true;
             }
