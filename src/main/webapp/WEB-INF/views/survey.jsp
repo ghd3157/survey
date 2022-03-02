@@ -35,27 +35,27 @@
                             <h7>학습목표를 선택해 주세요(복수선택 가능)</h7>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox1" value="1">
+                            <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox1" value="편입 및 대졸자 전형준비">
                             <label class="form-check-label" for="inlineCheckbox1">편입 및 대졸자 전형준비</label>
                         </div>
                         <br/>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox2" value="2">
+                            <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox2" value="자격증 취득 과정">
                             <label class="form-check-label" for="inlineCheckbox2">자격증 취득 과정</label>
                         </div>
                         <br/>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox3" value="3">
+                            <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox3" value="기사/산업기사 응시자격">
                             <label class="form-check-label" for="inlineCheckbox3">기사/산업기사 응시자격</label>
                         </div>
                         <br/>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox4" value="4">
+                            <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox4" value="학위취득 취득과정">
                             <label class="form-check-label" for="inlineCheckbox4">학위취득 취득과정</label>
                         </div>
                         <br/>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox5" value="5">
+                            <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox5" value="대학원 진학준비">
                             <label class="form-check-label" for="inlineCheckbox5">대학원 진학준비</label>
                         </div>
                     </div>
@@ -65,23 +65,23 @@
                             <h7>최종학력을 선택해 주세요(택1)</h7>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox6" value="1">
+                            <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox6" value="고등학교 졸업">
                             <label class="form-check-label" for="inlineCheckbox6">고등학교 졸업</label>
                         </div><br/>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox7" value="2">
+                            <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox7" value="전문대학교 졸업">
                             <label class="form-check-label" for="inlineCheckbox7">전문대학교 졸업</label>
                         </div><br/>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox8" value="3">
+                            <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox8" value="4년제 대학교 졸업">
                             <label class="form-check-label" for="inlineCheckbox8">4년제 대학교 졸업</label>
                         </div><br/>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox9" value="4">
+                            <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox9" value="대학교 중퇴">
                             <label class="form-check-label" for="inlineCheckbox9">대학교 중퇴</label>
                         </div><br/>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox10" value="5">
+                            <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox10" value="기타">
                             <label class="form-check-label" for="inlineCheckbox10">기타</label>
                         </div>
                     </div>
@@ -91,11 +91,11 @@
                             <h7>상담 방식을 선택해 주세요</h7>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="adv" id="inlineCheckbox11" value="1">
+                            <input class="form-check-input" type="checkbox" name="adv" id="inlineCheckbox11" value="전화상담">
                             <label class="form-check-label" for="inlineCheckbox11">전화상담</label>
                         </div><br/>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="adv" id="inlineCheckbox12" value="2">
+                            <input class="form-check-input" type="checkbox" name="adv" id="inlineCheckbox12" value="카카오톡 상담">
                             <label class="form-check-label" for="inlineCheckbox12">카카오톡 상담</label>
                         </div>
                     </div>

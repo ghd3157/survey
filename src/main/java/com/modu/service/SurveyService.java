@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -20,16 +19,15 @@ public class SurveyService {
 
     @Transactional
     public List<SurveyInfo> findAll(){
-        List<SurveyInfo> userInfoList = new ArrayList<>();
-        surveyRepository.findAll();
-        return userInfoList;
+
+        return surveyRepository.findAll();
     }
 
     @Transactional
     public SurveyInfo insertSurvey(SurveyInfo surveyInfo){
 
         SurveyInfo survey = new SurveyInfo();
-        SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
         survey.setName(surveyInfo.getName());
         survey.setPhone(surveyInfo.getPhone());

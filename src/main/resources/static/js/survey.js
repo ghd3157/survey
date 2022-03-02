@@ -29,7 +29,6 @@ function nextPrev(n) {
     var advice = [];
     var name = $("#name").val();
     var phone = $("#phone").val();
-    var memo = $("#memo").val();
 
     $("input[name=obj]:checked").each(function () {
         objective.push($(this).val());
@@ -44,10 +43,7 @@ function nextPrev(n) {
     });
 
     var allData = {"name": name, "phone":phone , "objective":objective ,
-                    "education":education, "advice":advice, "memo":memo };
-
-    console.log(name + " / " + phone+ " / " + objective+ " / " + education+ " / " + advice+ " / " + memo)
-
+                    "education":education, "advice":advice};
 
     if (n == 1 && !validateForm())
         return false;

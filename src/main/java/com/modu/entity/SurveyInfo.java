@@ -3,8 +3,6 @@ package com.modu.entity;
 import lombok.*;
 
 import javax.persistence.*;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 @Entity
 @Getter
@@ -22,7 +20,7 @@ public class SurveyInfo {
     @Column(length=20)
     private String phone;
 
-    @Column(length=20)
+    @Column(length=200)
     private String objective;
 
     @Column(length=20)
@@ -36,6 +34,9 @@ public class SurveyInfo {
 
     @Column(length=50)
     private String regiDate;
+
+    @Column(length=20)
+    private int pay;
 
 }
 
