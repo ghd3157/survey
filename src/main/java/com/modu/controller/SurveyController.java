@@ -1,5 +1,6 @@
 package com.modu.controller;
 
+import com.modu.service.MailSendService;
 import com.modu.service.SurveyService;
 import com.modu.entity.SurveyInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +17,14 @@ public class SurveyController {
     @Autowired
     private SurveyService surveyService;
 
+    @Autowired
+    private MailSendService mailSendService;
+
     @RequestMapping(value = "/surveyPage/dataSend")
     public String dataSend(SurveyInfo surveyInfo){
 
         surveyService.insertSurvey(surveyInfo);
+        mailSendService.sendMail(surveyInfo);
 
         return "/hello";
     }
