@@ -42,8 +42,7 @@ public class SurveyInfo {
     @Column(length=20)
     private String counselor;
 
-    @Formula("(select count(*) from survey where counselor = '홍길동')")
-    private int Cnt1;
+
 
 }
 

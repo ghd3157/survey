@@ -34,6 +34,8 @@ public class ChartController {
 
         Map<String,Integer> dataMap = chartService.totalSurveyCount();
 
+        List<Map<String, Object>> cnt = chartService.getTotalCnt();
+
         int monthCount = dataMap.get("month"); // 이번달 설문 횟수
         int todayCount = dataMap.get("today"); // 오늘 설문 횟수
         int lastMonth = dataMap.get("lastMonth"); // 저번달 대비 증감율
@@ -92,6 +94,12 @@ public class ChartController {
         return "hello";
     }
 
+    /**
+     * 담당자 변경
+     * @param name
+     * @param id
+     * @return
+     */
     @RequestMapping(value = "/changeCounselor")
     public String changeCounselor(String name, int id){
 

@@ -17,7 +17,7 @@ public class ChartService {
     private SurveyRepository surveyRepository;
 
     /**
-     * 데이터 변환
+     * 모든 설문 정보
      * @return
      */
     @Transactional
@@ -29,6 +29,11 @@ public class ChartService {
         return dataList;
     }
 
+    /**
+     * 메모 저장
+     * @param memo
+     * @param id
+     */
     @Transactional
     public void insertMemo(String memo , int id){
 
@@ -39,6 +44,10 @@ public class ChartService {
 
     }
 
+    /**
+     * 결제여부 변경
+     * @param id
+     */
     @Transactional
     public void changePay(int id){
 
@@ -53,6 +62,10 @@ public class ChartService {
 
     }
 
+    /**
+     * 총 설문 정보(이번달, 오늘, 지난달 대비, 총 누적)
+     * @return
+     */
     @Transactional
     public HashMap<String, Integer> totalSurveyCount(){
 
@@ -129,6 +142,11 @@ public class ChartService {
 
     }
 
+    /**
+     * 담당자 변경
+     * @param name
+     * @param id
+     */
     @Transactional
     public void changeCounselor(String name,int id){
 
@@ -139,4 +157,22 @@ public class ChartService {
 
     }
 
+    /**
+     * 담당자별 데이터 호출
+     * @return
+     */
+    @Transactional
+    public List<Map<String, Object>> getTotalCnt(){
+
+        //Integer cnt = surveyRepository.findCnt("홍길동");
+
+        List<Map<String, Object>> cntGroupby = surveyRepository.findCntGroupBy();
+
+        for(Map<String, Object> o : cntGroupby){
+            System.out.println(o.get("counselor").toString());
+            System.out.println(o.get("cnt").toString());
+        }
+
+        return cntGroupby;
+    }
 }
