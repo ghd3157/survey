@@ -52,7 +52,7 @@
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 이번달 설문 횟수
                             </div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">40,000</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">${monthCount}</div>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                 오늘 설문 횟수
                             </div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">500</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">${todayCount}</div>
                         </div>
                     </div>
                 </div>
@@ -82,18 +82,18 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                전달 대비 설문 증가
+                                저번달 대비 설문 증가
                             </div>
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
                                     <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
-                                        50%
+                                        ${lastMonth}%
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="progress progress-sm mr-2">
                                         <div class="progress-bar bg-info" role="progressbar"
-                                             style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                                             style="width: ${lastMonth}%" aria-valuenow="0" aria-valuemin="0"
                                              aria-valuemax="100">
                                         </div>
                                     </div>
@@ -112,8 +112,8 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                Pending Requests</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                총 누적 설문 횟수</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">${totalCount}</div>
                         </div>
                     </div>
                 </div>
@@ -286,13 +286,14 @@
                                 <tr>
                                     <th>순번</th>
                                     <th>일시</th>
-                                    <th>학습목표</th>
+                                    <th style="width: 300px;">학습목표</th>
                                     <th>최종학력</th>
                                     <th>상담방식</th>
                                     <th>이름</th>
                                     <th>연락처</th>
                                     <th>결제여부</th>
                                     <th>비고</th>
+                                    <th>담당자</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -322,6 +323,15 @@
                                     <td>
                                         <input id="memo${i.count}" type="text" value="${user.memo}" style="width: 100px;">
                                         <button type="button" class="btn btn-light" style="font-size: small; margin-left:10px;" onclick="insertMemo('${i.count}','${user.userNum}')">저장</button>
+                                    </td>
+                                    <td>
+                                        <select id="counselor${i.count}" onchange="inserCounselor('${user.userNum}',${i.count})">
+                                            <option selected>${user.counselor}</option>
+                                            <option value="홍길동">홍길동</option>
+                                            <option value="임꺽정">임꺽정</option>
+                                            <option value="장길산">장길산</option>
+                                            <option value="최민식">최민식</option>
+                                        </select>
                                     </td>
                                 </tr>
                                 </c:forEach>
@@ -366,5 +376,4 @@
 <script src="/chart/js/demo/chart-pie-demo.js"></script>
 
 </body>
-
 </html>

@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.text.DecimalFormat;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/sysman")
@@ -30,7 +32,18 @@ public class ChartController {
 
         List<SurveyInfo> dataList = chartService.findAllUsers();
 
+        Map<String,Integer> dataMap = chartService.totalSurveyCount();
+
+        int monthCount = dataMap.get("month"); // 이번달 설문 횟수
+        int todayCount = dataMap.get("today"); // 오늘 설문 횟수
+        int lastMonth = dataMap.get("lastMonth"); // 저번달 대비 증감율
+
+
         model.addAttribute("dataList",dataList);
+        model.addAttribute("monthCount", monthCount);
+        model.addAttribute("todayCount", todayCount);
+        model.addAttribute("lastMonth", lastMonth);
+        model.addAttribute("totalCount", dataList.size());
 
         return new ModelAndView("chart");
     }
@@ -77,6 +90,16 @@ public class ChartController {
         chartService.changePay(id);
 
         return "hello";
+    }
+
+    @RequestMapping(value = "/changeCounselor")
+    public String changeCounselor(String name, int id){
+
+        System.out.println(name + id);
+        chartService.changeCounselor(name,id);
+
+
+        return "";
     }
 
 

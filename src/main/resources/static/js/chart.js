@@ -46,3 +46,24 @@ function changePay(num,index,pay) {
         }
     });
 }
+
+function inserCounselor(id,index) {
+
+   var name = $('#counselor' + index+'').val();
+   var allData = {"name":name, "id":id };
+   // name = 상담사 , id = userNum(PK)
+
+    $.ajax({
+        url: "/sysman/changeCounselor",
+        type: "POST",
+        data: allData,
+        success: function () {
+
+        },
+        error:function () {
+            alert("에러발생");
+        }
+    });
+
+
+}
