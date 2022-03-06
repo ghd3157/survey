@@ -37,9 +37,8 @@
             <div class="justify-content-center counter-wrap ftco-animate">
                 <div class="block-18">
                     <div class="text text-border d-flex align-items-center">
-                        <div class="imageMap ">
-                            <img src="/image/modu/photo0.jpeg" alt="이미지"/>
-                            <a class="link1" href="/" ></a>
+                        <div class="bground">
+                            <img class="bgimage" src="/image/modu/photo0.jpeg" alt="이미지"/>
                         </div>
                     </div>
                 </div>
@@ -93,7 +92,7 @@
             <div class="justify-content-center counter-wrap ftco-animate">
                 <div class="block-18">
                     <div class="text text-border d-flex align-items-center">
-                        <div class="imageMap ">
+                        <div class="imageMap">
                             <img src="/image/modu/photo1.jpeg" alt="이미지"/>
                             <a class="link1" href="/" ></a>
                         </div>

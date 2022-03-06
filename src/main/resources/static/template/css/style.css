@@ -2601,7 +2601,7 @@ input[type="button"].btn-block {
 
 div.imageMap { position:relative;}
 div.imageMap img {display:block;  width:100%;}
-div.imageMap a.link1 {position:absolute; left:35%; top:74%; width:30%; height:10%; border:0; }
+div.imageMap a.link1 {position:absolute; left:35%; top:13%; width:30%; height:30%; border:0; }
 
 
 @media (min-width: 576px) {
