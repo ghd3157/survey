@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Map;
 
@@ -108,6 +107,15 @@ public class ChartController {
 
 
         return "";
+    }
+
+    @RequestMapping(value = "/getChart")
+    public List<Map<String, Object>> getChart(){
+
+        List<Map<String, Object>> cnt = chartService.getTotalCnt();
+
+
+        return cnt;
     }
 
 
