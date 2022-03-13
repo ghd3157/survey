@@ -1,7 +1,9 @@
 package com.modu.controller;
 
 import com.modu.entity.SurveyInfo;
+import com.modu.entity.Sysman;
 import com.modu.service.ChartService;
+import com.modu.service.SysmanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.ui.Model;
