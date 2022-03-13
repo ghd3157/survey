@@ -168,10 +168,7 @@ public class ChartService {
 
         List<Map<String, Object>> cntGroupby = surveyRepository.findCntGroupBy();
 
-        for(Map<String, Object> o : cntGroupby){
-            System.out.println(o.get("counselor").toString());
-            System.out.println(o.get("cnt").toString());
-        }
+
 
         return cntGroupby;
     }

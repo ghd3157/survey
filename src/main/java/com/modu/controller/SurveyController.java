@@ -26,7 +26,7 @@ public class SurveyController {
         surveyService.insertSurvey(surveyInfo);
         mailSendService.sendMail(surveyInfo);
 
-        return "/hello";
+        return "hello";
     }
 
     /**
@@ -49,5 +49,11 @@ public class SurveyController {
     public ModelAndView surveyNewPage(SurveyInfo surveyInfo) {
 
         return new ModelAndView("survey_new");
+    }
+
+    @GetMapping(path = "/surveyPage/finish")
+    public ModelAndView surveyFinishPage(SurveyInfo surveyInfo) {
+
+        return new ModelAndView("finish_survey");
     }
 }

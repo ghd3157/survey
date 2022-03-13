@@ -64,7 +64,7 @@
                                 <div class="col-md-6 col-lg-4 justify-content-center counter-wrap ftco-animate">
                                     <div class="block-18">
                                         <div class="text-border align-items-center" style="text-align: center;">
-                                            <strong class="number" style="color:#0d76bc; font-size: 32px" data-number="81">0</strong>
+                                            <strong class="number" style="color:#0d76bc; font-size: 32px" data-number="${totalCount}">0</strong>
                                             <span style="color:black">&nbsp;&nbsp;금일 신청 수</span>
                                         </div>
                                     </div>
@@ -72,7 +72,7 @@
                                 <div class="col-md-6 col-lg-4 justify-content-center counter-wrap ftco-animate">
                                     <div class="block-18">
                                         <div class="text-border align-items-center" style="text-align: center;">
-                                            <strong class="number" style="color:#0d76bc; font-size: 32px" data-number="19">0</strong>
+                                            <strong class="number" style="color:#0d76bc; font-size: 32px" data-number="${restCount}">0</strong>
                                             <span style="color:black">&nbsp;&nbsp;금일 잔여 신청 수</span>
                                         </div>
                                     </div>

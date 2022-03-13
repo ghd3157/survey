@@ -48,6 +48,11 @@
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
                         <h6 class="m-0 font-weight-bold text-primary">설문 결과</h6>
+                        <div style="float: right">
+                            금일 신청수 기본 값 ->
+                            <input id="count" type="text" style="width:50px;" value="${count}">
+                            <button type="button" style="margin-left:5px;" onclick="changeCount()">저장</button>
+                        </div>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -56,44 +61,54 @@
                                 <tr>
                                     <th>순번</th>
                                     <th>일시</th>
-                                    <th>학습목표</th>
+                                    <th style="width: 300px;">학습목표</th>
                                     <th>최종학력</th>
                                     <th>상담방식</th>
                                     <th>이름</th>
                                     <th>연락처</th>
                                     <th>결제여부</th>
                                     <th>비고</th>
+                                    <%--<th>담당자</th>--%>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <c:forEach var="user" items="${dataList}" varStatus="i">
-                                <tr>
-                                    <td style="text-align: center">${user.userNum}</td>
-                                    <td>${user.regiDate}</td>
-                                    <td>${user.objective}</td>
-                                    <td>${user.education}</td>
-                                    <td>${user.advice}</td>
-                                    <td>${user.name}</td>
-                                    <td>${user.phone}</td>
-                                    <c:choose>
-                                        <c:when test="${user.pay eq 0}">
-                                            <td>
-                                                <div id="pay${i.count}" style="float:left;padding-top:7px;width:3px;">X</div>
-                                                <button  type="button" class="btn btn-light" style="font-size:small; margin-left:15px;" onclick="changePay('${user.userNum}','${i.count}','${user.pay}')">변경</button>
-                                            </td>
-                                        </c:when>
-                                        <c:when test="${user.pay eq 1}">
-                                            <td>
-                                                <div id="pay${i.count}" style="float:left;padding-top:7px;width:3px;">O</div>
-                                                <button type="button" class="btn btn-light" style="font-size:small; margin-left:15px;" onclick="changePay('${user.userNum}','${i.count}','${user.pay}')">변경</button>
-                                            </td>
-                                        </c:when>
-                                    </c:choose>
-                                    <td>
-                                        <input id="memo${i.count}" type="text" value="${user.memo}" style="width: 100px;">
-                                        <button type="button" class="btn btn-light" style="font-size: small; margin-left:10px;" onclick="insertMemo('${i.count}','${user.userNum}')">저장</button>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td style="text-align: center">${user.userNum}</td>
+                                        <td>${user.regiDate}</td>
+                                        <td>${user.objective}</td>
+                                        <td>${user.education}</td>
+                                        <td>${user.advice}</td>
+                                        <td>${user.name}</td>
+                                        <td>${user.phone}</td>
+                                        <c:choose>
+                                            <c:when test="${user.pay eq 0}">
+                                                <td>
+                                                    <div id="pay${i.count}" style="float:left;padding-top:7px;width:3px;">X</div>
+                                                    <button  type="button" class="btn btn-light" style="font-size:small; margin-left:15px;" onclick="changePay('${user.userNum}','${i.count}','${user.pay}')">변경</button>
+                                                </td>
+                                            </c:when>
+                                            <c:when test="${user.pay eq 1}">
+                                                <td>
+                                                    <div id="pay${i.count}" style="float:left;padding-top:7px;width:3px;">O</div>
+                                                    <button type="button" class="btn btn-light" style="font-size:small; margin-left:15px;" onclick="changePay('${user.userNum}','${i.count}','${user.pay}')">변경</button>
+                                                </td>
+                                            </c:when>
+                                        </c:choose>
+                                        <td>
+                                            <input id="memo${i.count}" type="text" value="${user.memo}" style="width: 100px;">
+                                            <button type="button" class="btn btn-light" style="font-size: small; margin-left:10px;" onclick="insertMemo('${i.count}','${user.userNum}')">저장</button>
+                                        </td>
+                                        <%--<td>
+                                            <select id="counselor${i.count}" onchange="inserCounselor('${user.userNum}',${i.count})">
+                                                <option selected>${user.counselor}</option>
+                                                <option value="홍길동">홍길동</option>
+                                                <option value="임꺽정">임꺽정</option>
+                                                <option value="장길산">장길산</option>
+                                                <option value="최민식">최민식</option>
+                                            </select>
+                                        </td>--%>
+                                    </tr>
                                 </c:forEach>
                                 </tbody>
                             </table>

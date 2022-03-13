@@ -54,7 +54,7 @@ function nextPrev(n) {
         document.getElementById("nextprevious").style.display = "none";
         // document.getElementById("all-steps").style.display = "none";
         document.getElementById("register").style.display = "none";
-        document.getElementById("text-message").style.display = "block";
+        document.getElementById("text-message").style.display = "none";
 
 
         $.ajax({
@@ -62,10 +62,9 @@ function nextPrev(n) {
             type: "POST",
             data: allData,
             success:function () {
-                alert("성공");
+                location.href='/user/surveyPage/finish';
             },
             error:function () {
-                alert("에러발생");
                 self.close();
             }
         });

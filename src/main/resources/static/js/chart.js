@@ -67,3 +67,25 @@ function inserCounselor(id,index) {
 
 
 }
+
+function changeCount() {
+
+    var count = $('#count').val();
+
+    var data = {"count":count};
+
+    console.log("count>>>>>>>" + count);
+
+    $.ajax({
+        url: "/sysman/changeCount",
+        type: "POST",
+        data: data,
+        success: function () {
+            alert("변경완료");
+        },
+        error:function () {
+            alert("에러발생");
+        }
+    });
+
+}

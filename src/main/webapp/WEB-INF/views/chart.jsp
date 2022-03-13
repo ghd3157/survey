@@ -278,6 +278,11 @@
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
                         <h6 class="m-0 font-weight-bold text-primary">설문 결과</h6>
+                        <div style="float: right">
+                            금일 신청수 기본 값 ->
+                            <input id="count" type="text" style="width:50px;" value="${count}">
+                            <button type="button" style="margin-left:5px;" onclick="changeCount()">저장</button>
+                        </div>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
