@@ -127,7 +127,7 @@ button:focus {
 }
 
 .content{
-    width:calc(30% - 24px);
+    width:calc(50% - 24px);
     border: 1px solid gray;
     background-color: #ffffff;
     position: absolute;
@@ -138,6 +138,13 @@ button:focus {
     border-radius: 10px;
 }
 
+.surveyTitle{
+    font-size: 2.75rem;
+}
+
+.textContent{
+    font-size: 1.5rem;
+}
 @media screen and (hover: none) and (pointer: coarse) {
     .content{
         width:calc(100% - 24px);
@@ -149,6 +156,14 @@ button:focus {
         transform: translate(-50%, -50%);
         padding: 40px;
         border-radius: 10px;
+    }
+
+    .surveyTitle{
+        font-size: 1.75rem;
+    }
+
+    .textContent{
+        font-size: 1rem;
     }
 }
 

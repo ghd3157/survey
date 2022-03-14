@@ -48,12 +48,12 @@ public class SurveyController {
     @GetMapping(path = "/surveyPage/new")
     public ModelAndView surveyNewPage(SurveyInfo surveyInfo) {
 
-        return new ModelAndView("survey_new");
+        return new ModelAndView("surveyFinish");
     }
 
     @GetMapping(path = "/surveyPage/finish")
     public ModelAndView surveyFinishPage(SurveyInfo surveyInfo) {
 
-        return new ModelAndView("finish_survey");
+        return new ModelAndView("surveyFinish");
     }
 }

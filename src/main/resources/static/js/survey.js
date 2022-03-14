@@ -47,14 +47,20 @@ function nextPrev(n) {
 
     if (n == 1 && !validateForm())
         return false;
+
+    if(currentTab < x.length - 1) {
         x[currentTab].style.display = "none";
         currentTab = currentTab + n;
+    }else {
+        currentTab = currentTab + n;
+    }
+
     if (currentTab >= x.length) {
 
-        document.getElementById("nextprevious").style.display = "none";
+        // document.getElementById("nextprevious").style.display = "none";
         // document.getElementById("all-steps").style.display = "none";
-        document.getElementById("register").style.display = "none";
-        document.getElementById("text-message").style.display = "none";
+        // document.getElementById("register").style.display = "none";
+        // document.getElementById("text-message").style.display = "none";
 
 
         $.ajax({
@@ -69,8 +75,10 @@ function nextPrev(n) {
             }
         });
 
+    }else{
+        showTab(currentTab);
     }
-    showTab(currentTab);
+
 }
 
 function validateForm() {

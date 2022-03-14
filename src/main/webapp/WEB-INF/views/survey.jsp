@@ -30,77 +30,77 @@
                 <form id="regForm">
                     <h6 id="register"></h6>
                     <div class="tab">
-                        <h3>학습목표</h3>
+                        <h3 class="surveyTitle">학습목표</h3>
                         <div id="objval" style="padding-bottom: 7px; color: #f63726; display: none;">
                             <h7>학습목표를 선택해 주세요(복수선택 가능)</h7>
                         </div>
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline textContent">
                             <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox1" value="편입 및 대졸자 전형준비">
                             <label class="form-check-label" for="inlineCheckbox1">편입 및 대졸자 전형준비</label>
                         </div>
                         <br/>
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline textContent">
                             <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox2" value="자격증 취득 과정">
                             <label class="form-check-label" for="inlineCheckbox2">자격증 취득 과정</label>
                         </div>
                         <br/>
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline textContent">
                             <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox3" value="기사/산업기사 응시자격">
                             <label class="form-check-label" for="inlineCheckbox3">기사/산업기사 응시자격</label>
                         </div>
                         <br/>
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline textContent">
                             <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox4" value="학위취득 취득과정">
                             <label class="form-check-label" for="inlineCheckbox4">학위취득 취득과정</label>
                         </div>
                         <br/>
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline textContent">
                             <input class="form-check-input" type="checkbox" name="obj" id="inlineCheckbox5" value="대학원 진학준비">
                             <label class="form-check-label" for="inlineCheckbox5">대학원 진학준비</label>
                         </div>
                     </div>
                     <div class="tab">
-                        <h3>최종학력</h3>
+                        <h3 class="surveyTitle">최종학력</h3>
                         <div id="eduval" style="padding-bottom: 7px; color: #f63726; display: none;">
                             <h7>최종학력을 선택해 주세요(택1)</h7>
                         </div>
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline textContent">
                             <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox6" value="고등학교 졸업">
                             <label class="form-check-label" for="inlineCheckbox6">고등학교 졸업</label>
                         </div><br/>
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline textContent">
                             <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox7" value="전문대학교 졸업">
                             <label class="form-check-label" for="inlineCheckbox7">전문대학교 졸업</label>
                         </div><br/>
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline textContent">
                             <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox8" value="4년제 대학교 졸업">
                             <label class="form-check-label" for="inlineCheckbox8">4년제 대학교 졸업</label>
                         </div><br/>
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline textContent">
                             <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox9" value="대학교 중퇴">
                             <label class="form-check-label" for="inlineCheckbox9">대학교 중퇴</label>
                         </div><br/>
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline textContent">
                             <input class="form-check-input" type="checkbox" name="edu" id="inlineCheckbox10" value="기타">
                             <label class="form-check-label" for="inlineCheckbox10">기타</label>
                         </div>
                     </div>
                     <div class="tab">
-                        <h3>상담진행방식</h3>
+                        <h3 class="surveyTitle">상담진행방식</h3>
                         <div id="adval" style="padding-bottom: 7px; color: #f63726; display: none;">
                             <h7>상담 방식을 선택해 주세요</h7>
                         </div>
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline textContent">
                             <input class="form-check-input" type="checkbox" name="adv" id="inlineCheckbox11" value="전화상담">
                             <label class="form-check-label" for="inlineCheckbox11">전화상담</label>
                         </div><br/>
-                        <div class="form-check form-check-inline">
+                        <div class="form-check form-check-inline textContent">
                             <input class="form-check-input" type="checkbox" name="adv" id="inlineCheckbox12" value="카카오톡 상담">
                             <label class="form-check-label" for="inlineCheckbox12">카카오톡 상담</label>
                         </div>
                     </div>
                     <div class="tab">
-                        <h3>성함 및 연락처</h3>
+                        <h3 class="surveyTitle">성함 및 연락처</h3>
                         <div id="nameval" style="padding-bottom: 7px; color: #f63726; display: none;">
                             <h7>이름을 입력해주세요</h7>
                         </div>
@@ -110,12 +110,15 @@
                         </div>
                         <p><input class="input" placeholder="-를 제외한 휴대폰 번호" id="phone" type="text"></p>
                     </div>
-                    <div class="thanks-message text-center" id="text-message"> <img src="https://i.imgur.com/O18mJ1K.png" width="100" class="mb-4">
-                        <h3>Thankyou for your feedback!</h3> <span>Thanks for your valuable information. It helps us to improve our services!</span>
-                    </div>
+<%--                    <div class="thanks-message text-center" id="text-message"> <img src="https://i.imgur.com/O18mJ1K.png" width="100" class="mb-4">--%>
+<%--                        <h3>Thankyou for your feedback!</h3> <span>Thanks for your valuable information. It helps us to improve our services!</span>--%>
+<%--                    </div>--%>
                     <div style="overflow:auto;" id="nextprevious">
                         <div style="float:right;"> <button type="button" id="prevBtn" onclick="nextPrev(-1)"><i class="fa fa-angle-double-left"></i></button> <button type="button" id="nextBtn" onclick="nextPrev(1)"><i class="fa fa-angle-double-right"></i></button> </div>
                     </div>
+<%--                    <div style="overflow:auto;" id="regButton" hidden>--%>
+<%--                        <div style="float:right;"> <button type="button" id="regBtn" onclick="nextPrev(1)"><i class="fa fa-angle-double-right"></i></button> </div>--%>
+<%--                    </div>--%>
                 </form>
         </div>
     </div>
