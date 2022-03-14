@@ -126,8 +126,10 @@ button:focus {
     opacity: 1
 }
 
+
+
 .content{
-    width:calc(50% - 24px);
+    width:calc(100% - 24px);
     border: 1px solid gray;
     background-color: #ffffff;
     position: absolute;
@@ -139,32 +141,39 @@ button:focus {
 }
 
 .surveyTitle{
-    font-size: 2.75rem;
+    font-size: 1.75rem;
 }
 
 .textContent{
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
+
+@media screen and (min-width: 800px){
+    @media (hover: hover) and (pointer: fine) {
+        .content{
+            width:calc(50% - 24px);
+            border: 1px solid gray;
+            background-color: #ffffff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .surveyTitle{
+            font-size: 2.75rem;
+        }
+
+        .textContent{
+            font-size: 1.5rem;
+        }
+    }
+}
+
 @media screen and (hover: none) and (pointer: coarse) {
-    .content{
-        width:calc(100% - 24px);
-        border: 1px solid gray;
-        background-color: #ffffff;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 40px;
-        border-radius: 10px;
-    }
 
-    .surveyTitle{
-        font-size: 1.75rem;
-    }
-
-    .textContent{
-        font-size: 1rem;
-    }
 }
 
 
