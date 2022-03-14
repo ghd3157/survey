@@ -12,7 +12,7 @@ function insertMemo(param,id) {
             alert("메모 저장");
         },
         error:function () {
-            alert("에러발생");
+            alert("에러발생1");
             self.close();
         }
     });
@@ -42,7 +42,7 @@ function changePay(num,index,pay) {
             }
         },
         error:function () {
-            alert("에러발생");
+            alert("에러발생2");
         }
     });
 }
@@ -61,7 +61,7 @@ function inserCounselor(id,index) {
 
         },
         error:function () {
-            alert("에러발생");
+            alert("에러발생3");
         }
     });
 
@@ -84,7 +84,7 @@ function changeCount() {
             alert("변경완료");
         },
         error:function () {
-            alert("에러발생");
+            alert("에러발생4");
         }
     });
 

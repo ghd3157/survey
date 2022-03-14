@@ -25,7 +25,7 @@ $(document).ready(function () {
 
         },
         error:function () {
-            alert("에러발생");
+            // alert("에러발생5");
         }
     });
 

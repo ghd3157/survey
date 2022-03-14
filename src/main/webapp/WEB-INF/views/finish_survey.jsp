@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Title</title>
+    <title>모두에듀 설문 페이지</title>
 </head>
 <body>
 <img src="/image/modu/surveyFinish.png" style="width:100%;">

@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>chart</title>
+    <title>모두에듀 관리자 페이지</title>
 
     <!-- Custom fonts for this template -->
     <link href="/chart/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
