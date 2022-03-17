@@ -156,16 +156,19 @@
                     </div>
                     <div class="mt-4 text-center small">
                         <span class="mr-2">
-                            <i class="fas fa-circle text-primary"></i> 홍길동
+                            <i class="fas fa-circle text-primary"></i> 1
                         </span>
                         <span class="mr-2">
-                            <i class="fas fa-circle text-success"></i> 임꺽정
+                            <i class="fas fa-circle text-success"></i> 2
                         </span>
                         <span class="mr-2">
-                            <i class="fas fa-circle text-info"></i> 장길산
+                            <i class="fas fa-circle text-info"></i> 3
                         </span>
                         <span class="mr-2">
-                            <i class="fas fa-circle text-danger"></i> 최민식
+                            <i class="fas fa-circle text-danger"></i> 4
+                        </span>
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-danger"></i> 5
                         </span>
                     </div>
                 </div>
@@ -184,36 +187,18 @@
                     <h6 class="m-0 font-weight-bold text-primary">설문자 학력 통계</h6>
                 </div>
                 <div class="card-body">
-                    <h4 class="small font-weight-bold">고등학교 졸업<span
-                            class="float-right">30%</span></h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 30%"
-                             aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">전문대학교 졸업 <span
-                            class="float-right">20%</span></h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 20%"
-                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">4년제 대학교 졸업 <span
-                            class="float-right">30%</span></h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar" role="progressbar" style="width: 30%"
-                             aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">대학교 중퇴 <span
-                            class="float-right">15%</span></h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 15%"
-                             aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">기타 <span
-                            class="float-right">5%</span></h4>
-                    <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 5%"
-                             aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                    <c:forEach var="educationList" items="${educationList}" varStatus="status">
+                        <h4 class="small font-weight-bold">${educationList.education}<span
+                                class="float-right">
+                            <c:set var="pct" value="${educationList.cnt*100/totalCount}"/>
+                            <fmt:formatNumber value="${pct}" type="number" var="val" pattern="########"/>
+                            ${val}
+                            %</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: ${educationList.cnt}%"
+                                 aria-valuenow="${educationList.pct}" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </c:forEach>
                 </div>
             </div>
         </div>
@@ -332,10 +317,11 @@
                                     <td>
                                         <select id="counselor${i.count}" onchange="inserCounselor('${user.userNum}',${i.count})">
                                             <option selected>${user.counselor}</option>
-                                            <option value="홍길동">홍길동</option>
-                                            <option value="임꺽정">임꺽정</option>
-                                            <option value="장길산">장길산</option>
-                                            <option value="최민식">최민식</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="4">5</option>
                                         </select>
                                     </td>
                                 </tr>

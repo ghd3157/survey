@@ -172,4 +172,17 @@ public class ChartService {
 
         return cntGroupby;
     }
+
+    /**
+     * 학력통계
+     * @return
+     */
+    @Transactional
+    public List<Map<String, Object>> getEducationList(){
+        List<Map<String, Object>> rst = surveyRepository.findEducationGroupBy();
+
+        return rst;
+
+    }
+
 }

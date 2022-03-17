@@ -34,9 +34,9 @@ $(document).ready(function () {
 var config = {
     type: 'doughnut',
     data: {
-        labels: ["홍길동", "임꺽정", "장길산", "최민식"],
+        labels: ["1", "2", "3", "4", "5"],
         datasets: [{
-            data: [50, 30, 10, 10],
+            data: [50, 30, 10, 5, 5],
             backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#cc2b04'],
             hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf', '#cc2300'],
             hoverBorderColor: "rgba(234, 236, 244, 1)",
