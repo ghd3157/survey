@@ -195,7 +195,7 @@
 
     <footer class="sticky-footer">
         <div class="container my-auto">
-            <a href="/"><img class="sticky-footer footerBtn" src="/image/modu/sticky.png"></a>
+            <a href="/"><img class="sticky-footer footerBtn" src="/image/modu/sticky2.png"></a>
         </div>
     </footer>
 
