@@ -44,6 +44,8 @@ public class ChartController {
 
         List<Map<String, Object>> educationList = chartService.getEducationList();
 
+        List<Map<String, Object>> goalList = chartService.getGoalList();
+
         int monthCount = dataMap.get("month"); // 이번달 설문 횟수
         int todayCount = dataMap.get("today"); // 오늘 설문 횟수
         int lastMonth = dataMap.get("lastMonth"); // 저번달 대비 증감율
@@ -58,6 +60,7 @@ public class ChartController {
         model.addAttribute("lastMonth", lastMonth);
         model.addAttribute("totalCount", dataList.size());
         model.addAttribute("educationList", educationList);
+        model.addAttribute("goalList", goalList);
 
         return new ModelAndView("chart");
     }

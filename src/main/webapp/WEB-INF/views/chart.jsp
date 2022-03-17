@@ -209,36 +209,18 @@
                     <h6 class="m-0 font-weight-bold text-primary">설문자 학습목표 통계</h6>
                 </div>
                 <div class="card-body">
-                    <h4 class="small font-weight-bold">편입 및 대졸자 전형준비 <span
-                            class="float-right">20%</span></h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
-                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">자격증 취득 과정 <span
-                            class="float-right">30%</span></h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 30%"
-                             aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">기사/산업기사 응시자격 <span
-                            class="float-right">15%</span></h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar" role="progressbar" style="width: 15%"
-                             aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">학위취득 과정 <span
-                            class="float-right">30%</span></h4>
-                    <div class="progress mb-4">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 30%"
-                             aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <h4 class="small font-weight-bold">대학원 진학준비 <span
-                            class="float-right">5%</span></h4>
-                    <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 5%"
-                             aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
+                    <c:forEach var="goalList" items="${goalList}" varStatus="status">
+                        <h4 class="small font-weight-bold">${goalList.objective}<span
+                                class="float-right">
+                            <c:set var="pct" value="${goalList.cnt*100/totalCount}"/>
+                            <fmt:formatNumber value="${pct}" type="number" var="val" pattern="########"/>
+                            ${val}
+                            %</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: ${goalList.cnt}%"
+                                 aria-valuenow="${goalList.pct}" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </c:forEach>
                 </div>
             </div>
         </div>

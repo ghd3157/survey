@@ -178,11 +178,13 @@ public class ChartService {
      * @return
      */
     @Transactional
-    public List<Map<String, Object>> getEducationList(){
-        List<Map<String, Object>> rst = surveyRepository.findEducationGroupBy();
+    public List<Map<String, Object>> getEducationList(){ return surveyRepository.findEducationGroupBy(); }
 
-        return rst;
-
-    }
+    /**
+     * 학습목표통계
+     * @return
+     */
+    @Transactional
+    public List<Map<String, Object>> getGoalList(){ return surveyRepository.findGoalGroupBy(); }
 
 }

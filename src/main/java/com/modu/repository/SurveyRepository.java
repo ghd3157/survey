@@ -24,4 +24,7 @@ public interface SurveyRepository extends JpaRepository<SurveyInfo, Long> {
 
     @Query("select s.education as education, count(s.education) as cnt from SurveyInfo s group by s.education")
     List<Map<String, Object>> findEducationGroupBy();
+
+    @Query("select s.objective as objective, count(s.objective) as cnt from SurveyInfo s group by s.objective")
+    List<Map<String, Object>> findGoalGroupBy();
 }
