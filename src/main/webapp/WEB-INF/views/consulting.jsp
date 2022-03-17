@@ -193,8 +193,15 @@
         </div>
     </div>
 
+    <footer class="sticky-footer">
+        <div class="container my-auto">
+            <a href="/"><img class="sticky-footer footerBtn" src="/image/modu/sticky.png"></a>
+        </div>
+    </footer>
+
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
 
 
 <script src="/template/js/jquery.min.js"></script>
