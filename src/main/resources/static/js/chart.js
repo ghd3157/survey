@@ -1,3 +1,18 @@
+$(function(){
+    console.log("HERE!!");
+
+    $.ajax({
+        url: "/sysman/getChartData",
+        type:'post',
+        dataType: 'json',
+        async: false,
+        success: function (jsonData) {
+            alert("HI!");
+        }
+    })
+
+});
+
 
 function insertMemo(param,id) {
     var memo = $('#memo'+param+'').val();

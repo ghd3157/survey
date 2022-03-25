@@ -25,6 +25,7 @@
 
     <!-- Custom styles for this page -->
     <link href="/chart/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
 </head>
 
