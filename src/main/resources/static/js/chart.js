@@ -7,7 +7,12 @@ $(function(){
         dataType: 'json',
         async: false,
         success: function (jsonData) {
-            alert("HI!");
+            console.log(jsonData);
+            for(var i=0; i<30; i++){
+                myLineChart.data.labels[i] = jsonData[i].date;
+                myLineChart.data.datasets[0].data[i] = jsonData[i].val;
+            }
+            myLineChart.update();
         }
     })
 
