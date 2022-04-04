@@ -13,6 +13,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <!-- Global site tag (gtag.js) - Google Ads: 10862036725 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10862036725"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-10862036725');
+    </script>
     <title>모두에듀 설문 페이지</title>
 </head>
 <body>

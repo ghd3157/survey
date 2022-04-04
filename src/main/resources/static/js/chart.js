@@ -1,6 +1,5 @@
 $(function(){
-    console.log("HERE!!");
-
+    
     $.ajax({
         url: "/sysman/getChartData",
         type:'post',
