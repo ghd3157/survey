@@ -7,27 +7,27 @@ var ctx = document.getElementById("myPieChart");
 
 $(document).ready(function () {
  //ajax data
-    $.ajax({
-        url: "/sysman/getChart",
-        type: "POST",
-        success: function (data) {
-            console.log(Object.keys(data));
-            console.log(Object.values(data));
-            var key = Object.keys(data);
-            var val = Object.values(data);
-            var list = new Array();
-
-            for(var i=0;i< key.length; i++){
-                var v = val[i]
-                console.log(v)
-            }
-            /*http://www.gisdeveloper.co.kr/?p=11055 */
-
-        },
-        error:function () {
-            // alert("에러발생5");
-        }
-    });
+ //    $.ajax({
+ //        url: "/sysman/getChart",
+ //        type: "POST",
+ //        success: function (data) {
+ //            console.log(Object.keys(data));
+ //            console.log(Object.values(data));
+ //            var key = Object.keys(data);
+ //            var val = Object.values(data);
+ //            var list = new Array();
+ //
+ //            for(var i=0;i< key.length; i++){
+ //                var v = val[i]
+ //                console.log(v)
+ //            }
+ //            /*http://www.gisdeveloper.co.kr/?p=11055 */
+ //
+ //        },
+ //        error:function () {
+ //            // alert("에러발생5");
+ //        }
+ //    });
 
 })
 

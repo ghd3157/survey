@@ -45,6 +45,20 @@ public class ChartService {
     }
 
     /**
+     * 설문 삭제
+     * @param id
+     */
+    @Transactional
+    public void deleteSurvey(int id){
+
+        // ID로 유저정보 가져와서 메모 insert
+        SurveyInfo survey = surveyRepository.findByUserNum(id);
+
+        surveyRepository.delete(survey);
+
+    }
+
+    /**
      * 결제여부 변경
      * @param id
      */

@@ -267,6 +267,7 @@
                                     <th>결제여부</th>
                                     <th>비고</th>
                                     <th>담당자</th>
+                                    <th>삭제</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -306,6 +307,9 @@
                                             <option value="4">4</option>
                                             <option value="4">5</option>
                                         </select>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger" style="font-size: small; margin-left:10px;" onclick="delSurvey(${user.userNum})">삭제</button>
                                     </td>
                                 </tr>
                                 </c:forEach>

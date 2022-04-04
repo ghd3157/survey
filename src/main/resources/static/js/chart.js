@@ -18,6 +18,28 @@ $(function(){
 });
 
 
+function delSurvey(obj){
+
+    var data = {"id":obj};//ID
+
+    $.ajax({
+        url: "/sysman/deleteSurvey",
+        type: "POST",
+        data: data,
+        success: function () {
+            alert("삭제완료");
+            // $('#dataTable').DataTable().ajax.reload(null, false);
+            // $('#dataTable').DataTable().row().remove();
+            location.reload();
+        },
+        error:function () {
+            alert("에러발생");
+        }
+    });
+
+
+}
+
 function insertMemo(param,id) {
     var memo = $('#memo'+param+'').val();
 
@@ -92,8 +114,6 @@ function changeCount() {
     var count = $('#count').val();
 
     var data = {"count":count};
-
-    console.log("count>>>>>>>" + count);
 
     $.ajax({
         url: "/sysman/changeCount",

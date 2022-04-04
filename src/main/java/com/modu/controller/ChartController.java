@@ -102,6 +102,20 @@ public class ChartController {
     }
 
     /**
+     * 설문 삭제
+     * @param id
+     * @return
+     */
+    @RequestMapping(value = "/deleteSurvey")
+    public String deleteSurvey(int id){
+
+        // 설문조사 삭제
+        chartService.deleteSurvey(id);
+
+        return "deleteOk";
+    }
+
+    /**
      * 차트 데이터
      * @method post
      * @return
