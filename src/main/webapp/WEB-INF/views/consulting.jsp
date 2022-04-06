@@ -56,7 +56,7 @@
                                 <div class="col-md-6 col-lg-4 justify-content-center counter-wrap ftco-animate">
                                     <div class="block-18">
                                         <div class="text-border align-items-center" style="text-align: center;">
-                                            <strong class="number" style="color:#0d76bc; font-size: 32px" data-number="1068">0</strong>
+                                            <strong class="number" style="color:#0d76bc; font-size: 32px" data-number="${totalRealCount}">0</strong>
                                             <span style="color:black">&nbsp;&nbsp;누적 신청 수</span>
                                         </div>
                                     </div>

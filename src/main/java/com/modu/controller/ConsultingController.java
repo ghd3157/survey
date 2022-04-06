@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
 import java.util.Map;
 
 
@@ -42,6 +43,7 @@ public class ConsultingController {
 
         Map<String,Integer> dataMap = chartService.totalSurveyCount();
 
+        List<SurveyInfo> dataList = chartService.findAllUsers();
 
         int todayCount = dataMap.get("today"); // 오늘 설문 횟수
 
@@ -51,6 +53,7 @@ public class ConsultingController {
 
         model.addAttribute("totalCount",totalCount);
         model.addAttribute("restCount",restCount);
+        model.addAttribute("totalRealCount",dataList.size() + 1068);
 
         return new ModelAndView("consulting");
     }
