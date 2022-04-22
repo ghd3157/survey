@@ -120,7 +120,7 @@
                 <div class="block-18">
                     <div class="text text-border d-flex align-items-center">
                         <div class="bground">
-                            <img class="bgimage" src="/image/modu/modu_consulting_03.jpg">
+                            <img class="bgimage" src="/image/modu/modu_consulting_03_02.jpeg">
                         </div>
                     </div>
                 </div>
