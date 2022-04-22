@@ -28,4 +28,7 @@ public interface SurveyRepository extends JpaRepository<SurveyInfo, Long> {
     @Query("select s.objective as objective, count(s.objective) as cnt from SurveyInfo s group by s.objective")
     List<Map<String, Object>> findGoalGroupBy();
 
+    @Query("select s.objective from survey s WHERE MONTH(s.regiDate) = MONTH(CURRENT_DATE()) AND YEAR(s.regiDate) = YEAR(CURRENT_DATE) ")
+    List<Map<String, Object>> findMonthlyData();
+
 }
