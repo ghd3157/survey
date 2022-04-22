@@ -210,18 +210,70 @@
                     <h6 class="m-0 font-weight-bold text-primary">설문자 학습목표 통계</h6>
                 </div>
                 <div class="card-body">
-                    <c:forEach var="goalList" items="${goalList}" varStatus="status">
-                        <h4 class="small font-weight-bold">${goalList.objective}<span
+<%--                    <c:forEach var="goalList" items="${goalList}" varStatus="status">--%>
+<%--                        <h4 class="small font-weight-bold">${goalList.objective}<span--%>
+<%--                                class="float-right">--%>
+<%--                            <c:set var="pct" value="${goalList.cnt*100/totalCount}"/>--%>
+<%--                            <fmt:formatNumber value="${pct}" type="number" var="val" pattern="########"/>--%>
+<%--                            ${val}--%>
+<%--                            %</span></h4>--%>
+<%--                        <div class="progress mb-4">--%>
+<%--                            <div class="progress-bar bg-danger" role="progressbar" style="width: ${goalList.cnt}%"--%>
+<%--                                 aria-valuenow="${goalList.pct}" aria-valuemin="0" aria-valuemax="100"></div>--%>
+<%--                        </div>--%>
+<%--                    </c:forEach>--%>
+
+                        <h4 class="small font-weight-bold">기사/산업기사 응시자격<span
                                 class="float-right">
-                            <c:set var="pct" value="${goalList.cnt*100/totalCount}"/>
+                            <c:set var="pct" value="${goalObject.goal1*100/goalObject.totalSize}"/>
                             <fmt:formatNumber value="${pct}" type="number" var="val" pattern="########"/>
                             ${val}
                             %</span></h4>
                         <div class="progress mb-4">
-                            <div class="progress-bar bg-danger" role="progressbar" style="width: ${goalList.cnt}%"
-                                 aria-valuenow="${goalList.pct}" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: ${goalObject.goal1}%"
+                                 aria-valuenow="${val}" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
-                    </c:forEach>
+                        <h4 class="small font-weight-bold">학위취득 취득과정<span
+                                class="float-right">
+                                                <c:set var="pct" value="${goalObject.goal2*100/goalObject.totalSize}"/>
+                                                <fmt:formatNumber value="${pct}" type="number" var="val" pattern="########"/>
+                                                ${val}
+                                                %</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: ${goalObject.goal2}%"
+                                 aria-valuenow="${val}" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <h4 class="small font-weight-bold">대학원 진학준비<span
+                                class="float-right">
+                                                <c:set var="pct" value="${goalObject.goal3*100/goalObject.totalSize}"/>
+                                                <fmt:formatNumber value="${pct}" type="number" var="val" pattern="########"/>
+                                                ${val}
+                                                %</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: ${goalObject.goal3}%"
+                                 aria-valuenow="${val}" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <h4 class="small font-weight-bold">자격증 취득 과정<span
+                                class="float-right">
+                                                <c:set var="pct" value="${goalObject.goal4*100/goalObject.totalSize}"/>
+                                                <fmt:formatNumber value="${pct}" type="number" var="val" pattern="########"/>
+                                                ${val}
+                                                %</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: ${goalObject.goal4}%"
+                                 aria-valuenow="${val}" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <h4 class="small font-weight-bold">편입 및 대졸자 전형준비<span
+                                class="float-right">
+                                                <c:set var="pct" value="${goalObject.goal5*100/goalObject.totalSize}"/>
+                                                <fmt:formatNumber value="${pct}" type="number" var="val" pattern="########"/>
+                                                ${val}
+                                                %</span></h4>
+                        <div class="progress mb-4">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: ${goalObject.goal5}%"
+                                 aria-valuenow="${val}" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+
                 </div>
             </div>
         </div>

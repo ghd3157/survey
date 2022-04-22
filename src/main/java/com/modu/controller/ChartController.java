@@ -49,12 +49,55 @@ public class ChartController {
 
         List<Map<String, Object>> goalList = chartService.getGoalList();
 
+        List<Map<String, Object>> goalObject = new ArrayList<>();
+        Map<String, Object> tmpGaol = new HashMap<>();
+
+        System.out.println("==========================");
+        int size = 0;
+        int sSize1 = 0;
+        int sSize2 = 0;
+        int sSize3 = 0;
+        int sSize4 = 0;
+        int sSize5 = 0;
+
+        for(Map<String, Object> goal : goalList){
+            String[] rst = goal.get("objective").toString().split(",");
+            for(int i = 0; i < rst.length; i++) {
+                size++;
+
+                if (rst[i].equals("기사/산업기사 응시자격"))
+                    sSize1++;
+                else if (rst[i].equals("학위취득 취득과정"))
+                    sSize2++;
+                else if (rst[i].equals("대학원 진학준비"))
+                    sSize3++;
+                else if (rst[i].equals("자격증 취득 과정"))
+                    sSize4++;
+                else
+                    sSize5++;
+
+            }
+        }
+
+        System.out.println("==========================");
+
+        tmpGaol.put("goal1", sSize1);
+        tmpGaol.put("goal2", sSize2);
+        tmpGaol.put("goal3", sSize3);
+        tmpGaol.put("goal4", sSize4);
+        tmpGaol.put("goal5", sSize5);
+        tmpGaol.put("totalSize", size);
+
+//        goalObject.add(tmpGaol);
+
         int monthCount = dataMap.get("month"); // 이번달 설문 횟수
         int todayCount = dataMap.get("today"); // 오늘 설문 횟수
         int lastMonth = dataMap.get("lastMonth"); // 저번달 대비 증감율
 
         Sysman count = sysmanService.getSysCount(1);
 
+
+        model.addAttribute("goalObject", tmpGaol);
         model.addAttribute("count",count.getSysmanCount());
 
         model.addAttribute("dataList",dataList);
