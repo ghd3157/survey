@@ -33,7 +33,7 @@ public class SurveyService {
         survey.setPhone(surveyInfo.getPhone());
         survey.setObjective(surveyInfo.getObjective());
         survey.setEducation(surveyInfo.getEducation());
-        survey.setAdvice(surveyInfo.getAdvice());
+        survey.setAdvice("전화상담");
         survey.setMemo(surveyInfo.getMemo());
         survey.setRegiDate(date.format(new Date()));
 

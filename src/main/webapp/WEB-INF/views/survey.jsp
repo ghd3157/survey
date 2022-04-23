@@ -85,7 +85,7 @@
                             <label class="form-check-label" for="inlineCheckbox10">기타</label>
                         </div>
                     </div>
-                    <div class="tab">
+                    <%--<div class="tab">
                         <h3 class="surveyTitle">상담진행방식</h3>
                         <div id="adval" style="padding-bottom: 7px; color: #f63726; display: none;">
                             <h7>상담 방식을 선택해 주세요</h7>
@@ -98,7 +98,7 @@
                             <input class="form-check-input" type="checkbox" name="adv" id="inlineCheckbox12" value="카카오톡 상담">
                             <label class="form-check-label" for="inlineCheckbox12">카카오톡 상담</label>
                         </div>
-                    </div>
+                    </div>--%>
                     <div class="tab">
                         <h3 class="surveyTitle">성함 및 연락처</h3>
                         <div id="nameval" style="padding-bottom: 7px; color: #f63726; display: none;">

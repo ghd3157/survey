@@ -313,7 +313,7 @@
                                     <th>일시</th>
                                     <th style="width: 300px;">학습목표</th>
                                     <th>최종학력</th>
-                                    <th>상담방식</th>
+                                    <%--<th>상담방식</th>--%>
                                     <th>이름</th>
                                     <th>연락처</th>
                                     <th>결제여부</th>
@@ -329,7 +329,7 @@
                                     <td>${user.regiDate}</td>
                                     <td>${user.objective}</td>
                                     <td>${user.education}</td>
-                                    <td>${user.advice}</td>
+                                    <%--<td>${user.advice}</td>--%>
                                     <td>${user.name}</td>
                                     <td>${user.phone}</td>
                                     <c:choose>

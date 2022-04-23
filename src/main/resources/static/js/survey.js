@@ -98,7 +98,7 @@ function validateForm() {
             }
         }
 
-        if(z[h].name == "adv"){
+/*        if(z[h].name == "adv"){
             if(!$("input:checked[name=adv]").is(":checked")){
                 document.getElementById("adval").style.display = "block";
                 valid=false;
@@ -106,7 +106,7 @@ function validateForm() {
                 document.getElementById("adval").style.display = "none";
                 valid=true;
             }
-        }
+        }*/
 
         if(z[h].name == "edu"){
             var len = $("input[name=edu]:checkbox:checked").length;

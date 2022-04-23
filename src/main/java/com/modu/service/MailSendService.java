@@ -46,7 +46,7 @@ public class MailSendService {
         sb.append("<h4>연락처 : "+surveyInfo.getPhone()+"</h4>\n");
         sb.append("<h4>목적 : "+surveyInfo.getObjective()+"</h4>\n");
         sb.append("<h4>최종학력 : "+surveyInfo.getEducation()+"</h4>\n");
-        sb.append("<h4>상담방식 : "+surveyInfo.getAdvice()+"</h4>\n");
+//        sb.append("<h4>상담방식 : "+surveyInfo.getAdvice()+"</h4>\n");
 //        sb.append("<h4>희망과정 : "+surveyInfo.get()+"</h4>\n");
         String html = sb.toString();
 
