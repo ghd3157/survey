@@ -136,13 +136,28 @@ function validateForm() {
 
         if(y[i].id=="phone"){
             var phone = $("#phone").val();
-            if(phone.trim() ==''){
+
+            // 핸드폰번호 첫/두번째 자리는 01로 시작하며 세번째 자리는 01+0/1/6/7/8/9 가 될 수 있다.
+            // 번호 사이사이 대쉬('-')는 사용자가 작성하든 안하든 무시한다.
+            // 번호 두번째,세번째 마디는 4자리가 가능하며 숫자는 0-9까지 들어올 수 있다.
+            var regPhone = /^01([0|1|6|7|8|9])-?([0-9]{4})-?([0-9]{4})$/;
+
+            /*if(phone.trim() ==''){
                 document.getElementById("phoneval").style.display = "block";
                 valid=false;
             }else if(!(phone.trim() == '')){
                 document.getElementById("phoneval").style.display = "none";
             }
             else if(!(phone.trim() =='') && !(name.trim() == '')){
+                document.getElementById("phoneval").style.display = "none";
+                valid=true;
+            }*/
+            if(regPhone.test(phone) === false){
+                document.getElementById("phoneval").style.display = "block";
+                valid=false;
+            }else if(regPhone.test(phone) === true){
+                document.getElementById("phoneval").style.display = "none";
+            }else if((regPhone.test(phone) === true) && !(name.trim() == '')){
                 document.getElementById("phoneval").style.display = "none";
                 valid=true;
             }
