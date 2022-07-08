@@ -18,15 +18,9 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <!-- Global site tag (gtag.js) - Google Ads: 10862036725 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10862036725"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'AW-10862036725');
-    </script>
+
+<!-- Global site tag (gtag.js) - Google Ads: 10894966919 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10894966919"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-10894966919'); </script>
 
     <title>모두에듀 설문 페이지</title>
 

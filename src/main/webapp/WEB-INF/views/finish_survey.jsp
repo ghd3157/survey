@@ -14,14 +14,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Global site tag (gtag.js) - Google Ads: 10862036725 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10862036725"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    
+	
+<!-- Global site tag (gtag.js) - Google Ads: 10894966919 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10894966919"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-10894966919'); </script>
 
-        gtag('config', 'AW-10862036725');
-    </script>
     <title>모두에듀 설문 페이지</title>
 </head>
 <body>

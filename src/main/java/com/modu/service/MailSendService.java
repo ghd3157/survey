@@ -33,7 +33,7 @@ public class MailSendService {
         String subject = "모두에듀 설문 [" + surveyInfo.getName() + "]";
         String fromEmail = "survey@modu.com";
         String fromUsername = "ModuEdu Admin";
-        String toEmail = "cnddnr0208@naver.com, cnddnr0208@gmail.com"; // 콤마(,)로 여러개 나열
+        String toEmail = "cnddnr0208@naver.com, cnddnr0208@gmail.com, tjrgns2007@naver.com"; // 콤마(,)로 여러개 나열
 //        String toEmail = "zzdlgksdjf00@naver.com";
 
         final String username = "cnddnr0208";

@@ -164,16 +164,15 @@ public class ChartController {
      * @return
      */
     @JsonProperty
-    @RequestMapping(value = "/getChartData")
+    @RequestMapping(value = "/gettvingChartData")
     public @ResponseBody Object getChartData() throws Exception{
         JSONArray jArray = new JSONArray();
         try {
             // 월별 그래프 결과 가져오셈
-
             for (int i = 29; i>=0; i--){
                     JSONObject sObject = new JSONObject();
                     sObject.put("date", i);
-                    sObject.put("val", i);
+                    sObject.put("val", 1);
                     jArray.add(sObject);
             }
 
